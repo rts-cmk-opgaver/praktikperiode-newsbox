@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/kawern/gulp-template.git"
+    "url": "git+https://github.com/kawern/praktikperiode-newsbox.git"
   },
   "keywords": [
     "gulp",
@@ -20,9 +20,9 @@
   "author": "Kasper Lisberg",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/kawern/gulp-template/issues"
+    "url": "https://github.com/kawern/praktikperiode-newsbox/issues"
   },
-  "homepage": "https://github.com/kawern/gulp-template#readme",
+  "homepage": "https://github.com/kawern/praktikperiode-newsbox#readme",
   "dependencies": {
     "gulp": "^4.0.2"
   },
