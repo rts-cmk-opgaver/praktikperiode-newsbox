@@ -5,4 +5,9 @@
 body {
     background-color: white;
     color: red;
+    font-family: "CustomFont", Arial, Helvetica, sans-serif;
 }
+@font-face {
+    font-family: "CustomFont";
+    src: url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap');
+    }
