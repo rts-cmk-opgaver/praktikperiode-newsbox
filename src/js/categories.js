@@ -1,8 +1,8 @@
-var coll = document.querySelector(".news__category");
+var cat = document.querySelectorAll(".news__category");
 var i;
 
-for (i = 0; i < coll.length; i++) {
-  coll[i].addEventListener("click", function() {
+for (i = 0; i < cat.length; i++) {
+  cat[i].addEventListener("click", function() {
     this.classList.toggle("active");
     var content = this.nextElementSibling;
     if (content.style.display === "block") {
