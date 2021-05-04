@@ -1,19 +1,36 @@
-let test = document.querySelector(".news__category-title");
-let test2 = document.querySelector("news__category-article")
+document.addEventListener("DOMContentLoaded", function () {
 
-fetch("https://rss.nytimes.com/services/xml/rss/nyt/Europe.xml")
+    const search = document.querySelector("#search")
+    const newsList = document.querySelector(".europeNews__newsList");
+
+if (newsList) {    
+    let url = new URLSearchParams(window.location.search)
+
+fetch("https://rss.nytimes.com/services/xml/rss/nyt/Health.xml")
 .then(response => response.text())
 .then(result => {
 
     const parser = new DOMParser(); // initialize dom parser
     const srcDOM = parser.parseFromString(result, "application/xml"); // convert dom string to dom tree. 
-return xml2json(srcDOM)
-})
-.then(jsonResult => 
-       test.innerHTML = `${jsonResult.rss.channel.title}`
-       )
+return xml2json(srcDOM)})
+        .then(response => {
+            console.log(response.rss.channel.item)
+addToList(response.rss.channel.item)
+        })
 
-       .then(jsonResult =>
-        test2.innerHTML = `    <div class="news__category-article-img">${jsonResult.rss.channel.item.title}</div>
-        <div class="news__category-article-title">${jsonResult.rss.channel.item.title}</div>
-        <div class="news__category-article-content">${jsonResult.rss.channel.title}</div>`)
+    function addToList(item) {
+        let articles = item;
+
+        articles.forEach(item => {
+            let li = document.createElement("li")
+
+            li.innerHTML = `
+            <div class="europeNews__newsList-article-img"></div>
+            <div class="europeNews__newsList-article-title">${item.title}</div>
+            <div class="europeNews__newsList-article-content">${item.description}</div>`;
+
+            newsList.append(li)
+        })
+    }
+}
+});

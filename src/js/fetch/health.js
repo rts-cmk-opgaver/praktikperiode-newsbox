@@ -1,4 +1,3 @@
-
 fetch("https://rss.nytimes.com/services/xml/rss/nyt/Health.xml")
 .then(response => response.text())
 .then(result => {
