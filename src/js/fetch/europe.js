@@ -26,9 +26,9 @@ addToList(response.rss.channel.item)
             li.className = "europeNews__newsList-item";
 
             li.innerHTML = `
-            <div lass="europeNews__newsList-article-img"></div>
-            <div class="europeNews__newsList-article-title">${item.title}</div>
-            <div class="europeNews__newsList-article-content">${item.description}</div>`;
+            <span class="europeNews__newsList-article-img"></span>
+            <p class="europeNews__newsList-article-title">${item.title}</p>
+            <span class="europeNews__newsList-article-content">${item.description}</span>`;
 
             newsList.append(li)
         })
