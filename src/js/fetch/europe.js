@@ -23,9 +23,10 @@ addToList(response.rss.channel.item)
 
         articles.forEach(item => {
             let li = document.createElement("li")
+            li.className = "europeNews__newsList-item";
 
             li.innerHTML = `
-            <div class="europeNews__newsList-article-img"></div>
+            <div lass="europeNews__newsList-article-img"></div>
             <div class="europeNews__newsList-article-title">${item.title}</div>
             <div class="europeNews__newsList-article-content">${item.description}</div>`;
 

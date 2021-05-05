@@ -35,7 +35,12 @@ justify-content: space-between;
     padding: 15px;
   }
   &__newsList li {
-    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    background-color: cadetblue;
+    position: relative;
+    left: 0;
+    margin-bottom: 1em;
     border-bottom: 1px solid $fossil;
   }
   &__newsList-article-img {
@@ -54,4 +59,8 @@ float: left;
   &__newsList-article-content {
     padding: 0;
   }
+}
+
+.animate{
+  transition: all 0.3s ease-out;
 }
