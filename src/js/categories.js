@@ -1,4 +1,4 @@
-var cat = document.querySelectorAll(".europeNews");
+var cat = document.querySelectorAll(".newsBtn");
 var i;
 
 for (i = 0; i < cat.length; i++) {
