@@ -12,7 +12,12 @@
 .frontpageNews {
 
   &__category-img {
-    padding: 10px;
+      background-color: white;
+      border-radius: 100px;
+      width: 35px;
+      height: 35px;
+      margin: 0 16px;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   }
   &__business-title {
     font-size: 15px;

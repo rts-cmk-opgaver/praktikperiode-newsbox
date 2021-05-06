@@ -16,13 +16,18 @@ height: 100vh;
 }
 &__content {
     background-color: white;
-    margin: 20px;
-    padding: 10px;
-    border-radius: 10px;
+    margin: 1.2em;
+    border-radius: 0.5em;
     border: none;
     list-style: none;
 }
 &__content li {
     vertical-align: middle;
+    height: 3em;
+    line-height: 2em;
+    border-bottom: 1px solid $fossil;
+    padding: 10px;
+    font-weight: bold;
+    text-transform: uppercase;
 }
 }
