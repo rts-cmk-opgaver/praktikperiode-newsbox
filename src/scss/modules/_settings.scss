@@ -1,0 +1,28 @@
+.settings {
+background-color: #ECEFF0;
+height: 100vh;
+
+&__title {
+    font-size: 30px;
+    font-weight: bold;
+    color: $sage;
+    text-align: center;
+    padding-top: 29px;
+}
+&__title p {
+    font-size: 20px;
+    color: #707070;
+    font-weight: normal;
+}
+&__content {
+    background-color: white;
+    margin: 20px;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    list-style: none;
+}
+&__content li {
+    vertical-align: middle;
+}
+}

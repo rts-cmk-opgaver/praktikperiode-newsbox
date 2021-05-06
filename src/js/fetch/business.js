@@ -2,11 +2,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const search = document.querySelector("#search")
     const newsList = document.querySelector(".businessNews__newsList");
+    const categoryTitle = document.querySelector(".frontpageNews__business-title");
 
 if (newsList) {    
     let url = new URLSearchParams(window.location.search)
 
-fetch("https://rss.nytimes.com/services/xml/rss/nyt/Business.xml")
+fetch("https://rss.nytimes.com/services/xml/rss/nyt/business.xml")
 .then(response => response.text())
 .then(result => {
 
@@ -15,6 +16,7 @@ fetch("https://rss.nytimes.com/services/xml/rss/nyt/Business.xml")
 return xml2json(srcDOM)})
         .then(response => {
             console.log(response.rss.channel.item)
+            categoryTitle.innerHTML = `${response.rss.channel.title}`
 addToList(response.rss.channel.item)
         })
 
@@ -23,12 +25,12 @@ addToList(response.rss.channel.item)
 
         articles.forEach(item => {
             let li = document.createElement("li")
-            li.className = "businessNews__newsList-item";
+            li.className = "newsList__item";
 
             li.innerHTML = `
-            <div lass="businessNews__newsList-article-img"></div>
-            <div class="businessNews__newsList-article-title">${item.title}</div>
-            <div class="businessNews__newsList-article-content">${item.description}</div>`;
+            <div class="newsList__item-img"></div>
+            <div class="newsList__item-title">${item.title}</div>
+            <div class="newsList__item-content">${item.description}</div>`;
 
             newsList.append(li)
         })
