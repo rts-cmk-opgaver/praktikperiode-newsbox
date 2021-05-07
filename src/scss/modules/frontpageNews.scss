@@ -76,7 +76,7 @@
 &__item {
   overflow: hidden;
   height: fit-content;
-  padding: 10px;
+  padding: 10px 10px 10px 0px;
   border-bottom: 1px solid #C8D1D3;
 }
 &__item-img img {
@@ -99,6 +99,7 @@ font-size: 14px;
 color: #6E8CA0;
 display: block;
 margin-left: 6.8em;
+white-space: break-spaces;
 }
 }
 
