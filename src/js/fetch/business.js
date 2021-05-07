@@ -4,36 +4,38 @@ document.addEventListener("DOMContentLoaded", function () {
     const newsList = document.querySelector(".businessNews__newsList");
     const categoryTitle = document.querySelector(".frontpageNews__business-title");
 
-if (newsList) {    
-    let url = new URLSearchParams(window.location.search)
+    if (newsList) {
+        let url = new URLSearchParams(window.location.search)
 
-fetch("https://rss.nytimes.com/services/xml/rss/nyt/business.xml")
-.then(response => response.text())
-.then(result => {
+        fetch("https://rss.nytimes.com/services/xml/rss/nyt/business.xml")
+            .then(response => response.text())
+            .then(result => {
 
-    const parser = new DOMParser(); // initialize dom parser
-    const srcDOM = parser.parseFromString(result, "application/xml"); // convert dom string to dom tree. 
-return xml2json(srcDOM)})
-        .then(response => {
-            console.log(response.rss.channel.item)
-            categoryTitle.innerHTML = `${response.rss.channel.title}`
-addToList(response.rss.channel.item)
-        })
+                const parser = new DOMParser(); // initialize dom parser
+                const srcDOM = parser.parseFromString(result, "application/xml"); // convert dom string to dom tree. 
+                return xml2json(srcDOM)
+            })
+            .then(response => {
+                categoryTitle.innerHTML = `BUSINESS`
+                addToList(response.rss.channel.item)
+            })
 
-    function addToList(item) {
-        let articles = item;
+        function addToList(item) {
+            let articles = item;
 
-        articles.forEach(item => {
-            let li = document.createElement("li")
-            li.className = "newsList__item";
+            articles.forEach(item => {
+                let li = document.createElement("li")
+                li.className = "newsList__item";
 
-            li.innerHTML = `
-            <div class="newsList__item-img"></div>
-            <div class="newsList__item-title">${item.title}</div>
-            <div class="newsList__item-content">${item.description}</div>`;
+                li.innerHTML = `
+                    <a  target="_blank" href="${item.link}">
+                    <div class="newsList__item-img"><img src="img/news.png"></div>
+                    <div class="newsList__item-title">${item.title}</div>
+                    <div class="newsList__item-content">${item.description}</div></a>
+                `;
 
-            newsList.append(li)
-        })
+                newsList.append(li)
+            })
+        }
     }
-}
 });

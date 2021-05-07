@@ -16,7 +16,7 @@ fetch("https://rss.nytimes.com/services/xml/rss/nyt/travel.xml")
 return xml2json(srcDOM)})
         .then(response => {
             console.log(response.rss.channel.item)
-            categoryTitle.innerHTML = `${response.rss.channel.title}`
+            categoryTitle.innerHTML = `TRAVEL`
 addToList(response.rss.channel.item)
         })
 
@@ -28,9 +28,11 @@ addToList(response.rss.channel.item)
             li.className = "newsList__item";
 
             li.innerHTML = `
-            <div class="newsList__item-img"></div>
+            <a  target="_blank" href="${item.link}">
+            <div class="newsList__item-img"><img src="img/news.png"></div>
             <div class="newsList__item-title">${item.title}</div>
-            <div class="newsList__item-content">${item.description}</div>`;
+            <div class="newsList__item-content">${item.description}</div></a>
+        `;
 
             newsList.append(li)
         })

@@ -3,8 +3,8 @@
   color: #444;
   height: 57px;
   width: 100%;
-  display: flex;
-  flex-direction: row;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
   border: none;
   align-items: center;
   border-bottom: 1px solid #C8D1D3;
@@ -13,41 +13,58 @@
 
   &__category-img {
       background-color: white;
+      grid-column-start: 1;
+      grid-column-end: 2;
+      margin-left: 16px;
       border-radius: 100px;
       width: 35px;
       height: 35px;
-      margin: 0 16px;
       box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+  &__category-arrow {
+    margin-right: 16px;
+    grid-column-start: 6;
+    grid-column-end:6;
   }
   &__business-title {
     font-size: 15px;
     font-weight: bold;
     text-transform: uppercase;
-    justify-content: space-between;
+    grid-column-start: 2;
+    grid-column-end: 5;
+    justify-self: flex-start;
   }
   &__europe-title {
     font-size: 15px;
     font-weight: bold;
     text-transform: uppercase;
-    justify-content: space-between;
+    grid-column-start: 2;
+    grid-column-end: 5;
+    justify-self: flex-start;
   }
   &__health-title {
     font-size: 15px;
     font-weight: bold;
     text-transform: uppercase;
-    justify-content: space-between;
+    grid-column-start: 2;
+    grid-column-end: 5;
+    justify-self: flex-start;
   }
   &__sports-title {
     font-size: 15px;
     font-weight: bold;
     text-transform: uppercase;
-    justify-content: space-between;
+    grid-column-start: 2;
+    grid-column-end: 5;
+    justify-self: flex-start;
   }
   &__travel-title {
     font-size: 15px;
     font-weight: bold;
     text-transform: uppercase;
-    justify-content: space-between;
+    grid-column-start: 2;
+    grid-column-end: 5;
+    justify-self: flex-start;
   }
 }
 .newsList {
@@ -58,24 +75,21 @@
 
 &__item {
   overflow: hidden;
-  text-overflow: ellipsis;
   height: fit-content;
   padding: 10px;
-  left: 0;
   border-bottom: 1px solid #C8D1D3;
 }
-&__item-img {
+&__item-img img {
   width: 70px;
   height: 70px;
   align-content: center;
   border-radius: 100px;
-background-color: red;
-margin: 10px;
+margin: 0.8em;
 float: left;
 }
 &__item-title {
 font-size: 15px;
-color: #C8D1D3;
+color: #334856;
   font-weight: bold;
   line-break: auto;
 }
@@ -84,7 +98,7 @@ padding: 0;
 font-size: 14px;
 color: #6E8CA0;
 display: block;
-margin-left: 25%;
+margin-left: 6.8em;
 }
 }
 

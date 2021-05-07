@@ -10,7 +10,8 @@
     <link rel="alternate stylesheet" href="/css/theme/dark.css" title="dark" disabled>
     <link rel="alternate stylesheet" href="/css/theme/high-contrast.css" title="high-contrast" disabled> -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Antonio:wght@300;400&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Antonio:wght@300;400&family=Inter:wght@400;600&display=swap"
+        rel="stylesheet">
     <script src="https://kit.fontawesome.com/9b6af8cf82.js" crossorigin="anonymous"></script>
 
 
@@ -20,90 +21,110 @@
 <body>
     <div class="wrapper">
 
-    <header>
-        <div class="topmenu">
+        <header>
+            <div class="topmenu">
 
-            <div class="topmenu__inbox">
-                <a href="/archive/"><i class="fas fa-inbox"></i></a>
+                <div class="topmenu__inbox">
+                    <a href="/archive/"><i class="fas fa-inbox"></i></a>
+                </div>
+
+                <div class="topmenu__title">
+                    NewsBox
+                </div>
+
+                <div class="topmenu__wheel">
+                    <a href="/settings/"><i class="fas fa-cog"></i></a>
+                </div>
+
             </div>
 
-            <div class="topmenu__title">
-                NewsBox
+            <div class="searchBar">
+                <input type="search" name="search" id="search" placeholder="Search news "><button class="searchBar__btn"><i class="fas fa-search"></i></button>
             </div>
 
-            <div class="topmenu__wheel">
-                <a href="/settings/"><i class="fas fa-cog"></i></a>
-            </div>
-
-        </div>
-
-        <div class="searchBar">
-            <input type="search" name="search" id="search">
-        </div>
-
-    </header>
+        </header>
         <div class="frontpageNews">
 
             <div class="frontpageNews__category">
                 <button type="button" class="newsBtn">
-                        <img class="frontpageNews__category-img" src="/img/category.png">
-                        <div class="frontpageNews__business-title">
+                    <img class="frontpageNews__category-img" src="/img/category.png">
+                    <div class="frontpageNews__business-title">
                         Category title
-                    </div></button>
-                    
+                    </div>
+                    <div class="frontpageNews__category-arrow">
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                </button>
+
                 <ul class="businessNews__newsList">
                 </ul>
             </div>
 
             <div class="frontpageNews__category">
                 <button type="button" class="newsBtn">
-                        <img class="frontpageNews__category-img" src="/img/category.png">
-                        <div class="frontpageNews__europe-title">
+                    <img class="frontpageNews__category-img" src="/img/category.png">
+                    <div class="frontpageNews__europe-title">
                         Category title
-                    </div></button>
-                    
+                    </div>
+                    <div class="frontpageNews__category-arrow">
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                </button>
+
                 <ul class="europeNews__newsList">
                 </ul>
             </div>
 
             <div class="frontpageNews__category">
                 <button type="button" class="newsBtn">
-                        <img class="frontpageNews__category-img" src="/img/category.png">
-                        <div class="frontpageNews__health-title">
+                    <img class="frontpageNews__category-img" src="/img/category.png">
+                    <div class="frontpageNews__health-title">
                         Category title
-                    </div></button>
-                    
+                    </div>
+                    <div class="frontpageNews__category-arrow">
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                </button>
+
                 <ul class="healthNews__newsList">
                 </ul>
             </div>
 
             <div class="frontpageNews__category">
                 <button type="button" class="newsBtn">
-                        <img class="frontpageNews__category-img" src="/img/category.png">
-                        <div class="frontpageNews__sports-title">
+                    <img class="frontpageNews__category-img" src="/img/category.png">
+                    <div class="frontpageNews__sports-title">
                         Category title
-                    </div></button>
-                    
+                    </div>
+                    <div class="frontpageNews__category-arrow">
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                </button>
+
                 <ul class="sportsNews__newsList">
                 </ul>
             </div>
 
             <div class="frontpageNews__category">
                 <button type="button" class="newsBtn">
-                        <img class="frontpageNews__category-img" src="/img/category.png">
-                        <div class="frontpageNews__travel-title">
+                    <img class="frontpageNews__category-img" src="/img/category.png">
+                    <div class="frontpageNews__travel-title">
                         Category title
-                    </div></button>
-                    
+                    </div>
+                    <div class="frontpageNews__category-arrow">
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                </button>
+
                 <ul class="travelNews__newsList">
                 </ul>
             </div>
 
 
-            </div>
-
-
         </div>
+
+
+    </div>
     </div>
 
     <script src="/js/app.js"></script>
