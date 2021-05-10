@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
 
     const search = document.querySelector("#search")
-    const newsList = document.querySelector(".businessNews__newsList");
+    const newsList = document.querySelector(".swiperList__business");
     const categoryTitle = document.querySelector(".frontpageNews__business-title");
 
     if (newsList) {
@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 return xml2json(srcDOM)
             })
             .then(response => {
-                categoryTitle.innerHTML = `BUSINESS`
+                
                 addToList(response.rss.channel.item)
             })
 
@@ -25,12 +25,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
             articles.forEach(item => {
                 let li = document.createElement("li")
-                li.className = "newsList__item";
+                li.className = "swiperList__business-item";
 
                 li.innerHTML = `
-                    <a  target="_blank" href="${item.link}">
-                    <div class="newsList__item-img"><img src="img/news.png"></div>
-                    <div class="newsList__item-title">${item.title}</div>
+                <a  target="_blank" href="${item.link}"><div class="newsList__item-img"><img src="img/news.png"></img></div></a>
+                   <div class="newsList__item-title">${item.title}</div>
                     <div class="newsList__item-content">${item.description}</div></a>
                 `;
 

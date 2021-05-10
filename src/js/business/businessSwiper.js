@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function(){
 
-    const swiperList = document.querySelector(".swiperList");
+    const swiperList = document.querySelector(".swiperList__business");
 
     if (swiperList){
 
@@ -10,10 +10,18 @@ document.addEventListener("DOMContentLoaded", function(){
     //let winWidth = window.innerWidth;
 
     let icon = document.createElement("span");
-    icon.textContent = "🗑️";
+    icon.innerHTML = `<i class="fas fa-trash"></i>`;
+    icon.style.display = "flex"
+        icon.style.alignItems = "center"
+        icon.style.padding = "25px"
+        icon.style.color = "white"
+    icon.style.backgroundColor = "#D95454"
+    icon.style.height = "100%";
+    icon.style.width = "80px"
     icon.style.fontSize = "2em";
     icon.style.position = "absolute";
-    icon.style.top = "1em";
+    icon.style.top = "0em";
+    icon.style.alignContent = "center"
 
     console.log(swiperList)
 
@@ -35,7 +43,7 @@ document.addEventListener("DOMContentLoaded", function(){
     e.target.style.left = movedX + "px";
     }
 
-    if (movedX > window.innerWidth * 0.4){
+    if (movedX > window.innerWidth * 0.2){
     //console.log("get ready to move out!");
     icon.style.left = "-" + movedX + "px";
     e.target.appendChild(icon)
@@ -57,9 +65,11 @@ document.addEventListener("DOMContentLoaded", function(){
                 e.target.replaceChildren();
                 e.target.style.height = 0;
                 e.target.style.marginBottom = 0;
+                e.target.style.display = "none";
+                e.target.style.paddingTop = "0px";
             }, 300)
             setTimeout(function(){
-                swiperList.removeChild(e.target);
+                e.target.removeChild(e.target);
             }, 600)
         }
         else {

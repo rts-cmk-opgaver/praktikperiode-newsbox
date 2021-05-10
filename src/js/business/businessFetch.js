@@ -1,8 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
 
-    const search = document.querySelector("#search")
-    const newsList = document.querySelector(".swiperList");
-    const categoryTitle = document.querySelector(".frontpageNews__business-title");
+    const newsList = document.querySelector(".swiperList__business");
 
     if (newsList) {
         let url = new URLSearchParams(window.location.search)
@@ -24,8 +22,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
             articles.forEach(item => {
                 let li = document.createElement("li")
-                li.className = "swiperList__Item";
-                li.style.height = "fit-content";
+                li.className = "swiperList__business-item";
 
                 li.innerHTML = `
                 <a  target="_blank" href="${item.link}"><div class="newsList__item-img"><img src="img/news.png"></img></div></a>

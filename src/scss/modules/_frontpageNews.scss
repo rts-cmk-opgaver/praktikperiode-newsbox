@@ -21,12 +21,17 @@
       height: 35px;
       box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   }
+  &__category-img i {
+line-height: 35px;
+font-size: 18px;
+color: #D97D54;
+  }
   &__category-arrow {
     margin-right: 16px;
     grid-column-start: 6;
     grid-column-end:6;
   }
-  &__business-title {
+  &__title {
     font-size: 15px;
     font-weight: bold;
     text-transform: uppercase;
@@ -34,38 +39,7 @@
     grid-column-end: 5;
     justify-self: flex-start;
   }
-  &__europe-title {
-    font-size: 15px;
-    font-weight: bold;
-    text-transform: uppercase;
-    grid-column-start: 2;
-    grid-column-end: 5;
-    justify-self: flex-start;
-  }
-  &__health-title {
-    font-size: 15px;
-    font-weight: bold;
-    text-transform: uppercase;
-    grid-column-start: 2;
-    grid-column-end: 5;
-    justify-self: flex-start;
-  }
-  &__sports-title {
-    font-size: 15px;
-    font-weight: bold;
-    text-transform: uppercase;
-    grid-column-start: 2;
-    grid-column-end: 5;
-    justify-self: flex-start;
-  }
-  &__travel-title {
-    font-size: 15px;
-    font-weight: bold;
-    text-transform: uppercase;
-    grid-column-start: 2;
-    grid-column-end: 5;
-    justify-self: flex-start;
-  }
+
 }
 .newsList {
   display: none;
@@ -86,12 +60,14 @@
   border-radius: 100px;
 margin: 0.8em;
 float: left;
+pointer-events: none;
 }
 &__item-title {
 font-size: 15px;
 color: #334856;
   font-weight: bold;
   line-break: auto;
+  pointer-events: none;
 }
 &__item-content {
 padding: 0;
@@ -100,14 +76,8 @@ color: #6E8CA0;
 display: block;
 margin-left: 6.8em;
 white-space: break-spaces;
+pointer-events: none;
 }
-}
-
-.businessNews__newsList {
-  display: none;
-}
-.europeNews__newsList {
-  display: none;
 }
 .healthNews__newsList {
   display: none;

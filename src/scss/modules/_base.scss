@@ -15,11 +15,13 @@ body {
     color: #1B1C20;
     font-family: 'Inter', sans-serif;
 }
+
 .wrapper {
-    margin: 0 auto;
-    overflow: hidden;
-    width: 100vw;
-    max-width:100%;  /* added */
+  margin: 0 auto;
+  max-width: 414px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  overflow-x: hidden;   
+  height: 100vh;
 }
 a {
   color: black;
@@ -29,20 +31,6 @@ a {
 
 body {
   margin: 0;
-}
-
-.swiperList{
-  list-style: none;
-  padding: 0.5em;
-  overflow-x: hidden;
-}
-
-.swiperList__Item{
-  height: 6em;
-  background-color: cadetblue;
-  position: relative;
-  left: 0;
-  margin-bottom: 1em;
 }
 
 .animate{
