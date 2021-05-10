@@ -1,0 +1,23 @@
+.swiperList__business, .swiperList__europe, .swiperList__health, .swiperList__sports, .swiperList__travel {
+  display: none;
+  list-style: none;
+  overflow-x: hidden;
+
+  &-item {
+    position: relative;
+    height: fit-content;
+    min-height: 120px;
+    padding: 10px 10px 10px 0px;
+    border-bottom: 1px solid #C8D1D3;
+  }
+
+  &-item:before,
+  &-item:after {
+    content: "";
+    width: 300px;
+    position: absolute;
+    border-bottom: 1px solid #C8D1D3;
+    left: -100px;
+    bottom: -1px;
+  }
+}

@@ -1,11 +1,11 @@
 document.addEventListener("DOMContentLoaded", function () {
 
-    const newsList = document.querySelector(".swiperList__business");
+    const newsList = document.querySelector(".swiperList__health");
 
     if (newsList) {
         let url = new URLSearchParams(window.location.search)
 
-        fetch("https://rss.nytimes.com/services/xml/rss/nyt/business.xml")
+        fetch("https://rss.nytimes.com/services/xml/rss/nyt/health.xml")
             .then(response => response.text())
             .then(result => {
 
@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
             articles.forEach(item => {
                 let li = document.createElement("li")
-                li.className = "swiperList__business-item";
+                li.className = "swiperList__health-item";
 
                 li.innerHTML = `
                 <a  target="_blank" href="${item.link}"><div class="newsList__item-img"><img src="img/news.png"></img></div></a>
