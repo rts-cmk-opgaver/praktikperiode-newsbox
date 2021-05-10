@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
 
     const search = document.querySelector("#search")
-    const newsList = document.querySelector(".sportsNews__newsList");
+    const newsList = document.querySelector(".swiperList");
     const categoryTitle = document.querySelector(".frontpageNews__sports-title");
 
 if (newsList) {    
