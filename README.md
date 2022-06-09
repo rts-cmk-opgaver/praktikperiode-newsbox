@@ -5,24 +5,15 @@ Fra settings panelet skal brugeren have mulighed for at administrere det kategor
 <br>
 
 ### **Varighed:**
-3 uger (12 arbejdsdage)
+12 arbejdsdage
 
 
 ### **Målet med opgaven er:**
-* At arbejde med automatisering(Gulp). 
-* At arbejde med lagring af og data og indstillinger
+* At arbejde med React
+* At arbejde med lagring af data
 * At optimere brugeroplevelsen gennem microinteractions og animationer.
 * At få praktisk erfaring med Kanban.
 
-
-## Applikations tech stack
-
-HTML(structure)<br>
-JavaScript(logic / data collection)<br>
-Animate.css(Animations)<br>
-Gulp(build system)<br>
-Sass(css preprocessor)<br>
-Github pages(host)<br>
 
 ## Opgavebeskrivelse og materiale
 
@@ -36,25 +27,18 @@ Se XD fil (og billeder) i mappen projekt-UI.
    
 2. **Hente og præsentere data fra API<br>
    https://developer.nytimes.com/apis
-
-3. **Automatisering**<br>
-    Din udviklingsproces skal automatiseres med gulp. Du skal opsætte tasks/ funktioner til at flytte og behandle de filer du udvikler til en "dist"-mappe i din udviklingsproces og en "build"-mappe når dit projekt deployes. Der skal være processer som:
-    * flytter html filer.
-    * behandler og sammenskriver sass-filer til en samlet css fil.
-    * behandler javascript filer med Babel, og sammenskriver dem til én fil.
-    * øvrige processer tilføjes efter behov.
      
-4. **Animationer**<br>
+3. **Animationer**<br>
    En nyhedskategori kan være "åben", så de relaterede artikler fremgår af en liste herunder. En nyhedskategori kan også være    "lukket", sådan at det kun er nyhedskategorien som fremgår af listen men ikke de relaterede artiker. Det er din opgave at      animere overgangen mellem "åben" / "lukket" tilstand på en lækker måde.
  
    I settingspanelt kan man "tænde og slukke" for nyhedskategorier. Det er din opgave at animere "kontakternes/switches"          overgang fra "tændt" til "slukket".
  
-5. **Funktioner**<br>
+4. **Funktioner**<br>
    I settings-panelet skal brugeren have mulighed for at administrere det kategoriserede nyhedsoverblik ved at slå visning        til og fra på udvalgte nyhedskategorier. Det skal også være muligt at skifte mellem lyst og mørkt tema fra settings panelt    og applikationen skal "huske" indstillingerne. 
    
    Nyhedsartikler skal også kunne gemmes i et privat nyhedsarkiv. Gem funktionen bliver synlig når der swipes til venstre      [se illustration](https://github.com/rts-cmk-opgaver/praktik-projekt-newsbox/blob/master/assets/swipe-illustration.png        "swipe illustration") på en nyhed. Fra det private nyhedsarkiv kan ligeledes tilgås artikler og artikler kan slettes. Slet    funktionen bliver synlig når der swipes til venstre [se illustration](https://github.com/rts-cmk-opgaver/praktik-projekt-newsbox/blob/master/assets/swipe-illustration.png "swipe illustration") på en arkiveret nyhed.<br><br>
 
-6. **Deploy on Whatever...**<br>
+5. **Deploy on Whatever...**<br>
    Din webapplikation skal udgives på internettet :)
 
 ## Nice to have opgaver
